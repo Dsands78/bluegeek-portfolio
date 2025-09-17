@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* 1) Bluegeek Dark = default */
+:root {
+  --background: #0B1020;
+  --foreground: #E2E8F0;
+  --surface:    #111827;
+  --muted:      #94A3B8;
+  --primary:    #22D3EE;
+  --accent:     #A78BFA;
+  --border:     #1F2937;
+}
+
+/* 2) Optional light fallback (auto if user prefers light) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #F8FAFC;
+    --foreground: #0F172A;
+    --surface:    #FFFFFF;
+    --muted:      #475569;
+    --primary:    #0369A1;
+    --accent:     #0EA5E9;
+    --border:     #E5E7EB;
+  }
+}
+
+/* 3) Map tokens to Tailwind v4 color names */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface:    var(--surface);
+  --color-muted:      var(--muted);
+  --color-primary:    var(--primary);
+  --color-accent:     var(--accent);
+  --color-border:     var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 4) Base */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+/* 5) Small helpers (usable right away) */
+.btn-primary {
+  @apply rounded-xl px-4 py-2 font-medium shadow;
+  background: var(--primary);
+  color: #0B1020; /* readable on cyan */
+}
+.card { @apply rounded-2xl border p-6; border-color: var(--border); background: color-mix(in oklab, var(--surface) 85%, transparent); }
+.link-accent { color: var(--accent); }

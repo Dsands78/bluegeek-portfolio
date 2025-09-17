@@ -1,0 +1,27 @@
+export const metadata = {
+  title: "Help Desk Ticketing System",
+  description: "Turning ad-hoc support into a trackable workflow with SLAs and alerts."
+}
+
+<main className="min-h-screen bg-background text-foreground">
+  <article className="mx-auto max-w-3xl px-6 py-12 space-y-6">
+    <h1 className="text-3xl md:text-4xl font-bold">Help Desk Ticketing System</h1>
+    <p className="text-sm text-muted">Role: Full-stack + PM • Duration: 8 weeks</p>
+
+    <h2 className="text-xl font-semibold">Problem</h2>
+    <p>Support came via calls/texts; no triage, no SLA, no ownership.</p>
+
+    <h2 className="text-xl font-semibold">Approach</h2>
+    <ul className="list-disc pl-6 space-y-2">
+      <li>Modeled tickets → status, priority, tags, assignee, SLA.</li>
+      <li>Automated email notifications + daily digest.</li>
+      <li>Dashboard: backlog, aging tickets, SLA breaches.</li>
+    </ul>
+
+    <h2 className="text-xl font-semibold">Outcome</h2>
+    <p>First-response time ↓, resolution time ↓, duplicate requests ↓ (add exact metrics when ready).</p>
+
+    <h2 className="text-xl font-semibold">Stack</h2>
+    <p>Spring Boot API, React front end, PostgreSQL, JWT; later: webhooks for email ingest.</p>
+  </article>
+</main>
